@@ -12,6 +12,8 @@
 
     - Не удалось найти ни одного нового отзыва за заданное количество попыток scroll.no.new.content
 
+Запускать надо тест в файле src/test/kotlin/com/example/wildberriesreview/WildberriesReviewScraperTest.kt
+
 Основные преимущества разработанного алгоритма:
 1. Headless-режим Chrome:
     Использование headless браузера вместо обычного позволяет запускать парсинг без GUI,
