@@ -1,0 +1,40 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.9.25'
+    id 'application'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+description = 'WildberriesReview'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation 'org.seleniumhq.selenium:selenium-java:4.20.0'
+    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.15.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    testImplementation "org.jetbrains.kotlin:kotlin-test:1.9.25"
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'com.example.wildberriesreview.WildberriesReviewScraperTest'
+}
+
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
